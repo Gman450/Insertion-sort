@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int insort(int *array)
+int insort(int *array, int n)
 {
-  int d,c,n=7,t;
+  int d,c,t;
   for(c = 1;c<=n-1;c++) 
     {
       d = c;
@@ -25,13 +25,14 @@ int read(int *array)
   scanf("%d",&size);
   for(c=0;c<size;c++)
     scanf("%d",&array[c]);
+  return size;
 }
 
 int main()
 {
-  int c,n=7,array[7]={9,8,7,6,5,4,3};
-  //read(array);
-  insort(array);
+  int c,array[10];
+  int n=read(array);
+  insort(array,n);
   printf("Sorted array is---\n");
   for(c=0;c<n;c++)
     printf(" %d ",array[c]);
