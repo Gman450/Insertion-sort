@@ -28,14 +28,19 @@ int read(int *array)
   return size;
 }
 
+int disp(int *array,int n)
+{
+  int c;
+  for(c=0;c<n;c++)
+    printf(" %d ",array[c]);
+}
+
 int main()
 {
   int c,array[10];
   int n=read(array);
   insort(array,n);
   printf("Sorted array is---\n");
-  for(c=0;c<n;c++)
-    printf(" %d ",array[c]);
   printf("\n");
   return 0;
 }
