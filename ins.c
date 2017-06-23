@@ -18,9 +18,19 @@ int insort(int *array)
   return 0;
 }
 
+int read(int *array)
+{
+  int c,size;
+  printf("Enter size of array: ");
+  scanf("%d",&size);
+  for(c=0;c<size;c++)
+    scanf("%d",&array[c]);
+}
+
 int main()
 {
-  int array[7]={4,23,43,38,15,10,30},c,n=7;
+  int c,n=7,array[7]={9,8,7,6,5,4,3};
+  //read(array);
   insort(array);
   printf("Sorted array is---\n");
   for(c=0;c<n;c++)
